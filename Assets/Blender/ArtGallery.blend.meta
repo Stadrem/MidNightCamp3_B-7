@@ -3,7 +3,27 @@ guid: 8a918f723e3d5b244a2dc0299d05be32
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Benches_TX
+    second: {fileID: 2100000, guid: af28e87b73f0e0f478a803bfb745e549, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Floor_TX
+    second: {fileID: 2100000, guid: d68946d8069f1ce458793301f47cd75f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Gallery_TX
+    second: {fileID: 2100000, guid: 9b611138f96912c4ab90e6cf71163edd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Glass_TX
+    second: {fileID: 2100000, guid: eb058246d98638045b24196661a30835, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

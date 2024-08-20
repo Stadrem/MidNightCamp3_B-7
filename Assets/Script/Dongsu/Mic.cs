@@ -1,7 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using System.IO;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Networking;
 
 public class Mic : MonoBehaviour
 {
@@ -9,6 +11,9 @@ public class Mic : MonoBehaviour
     private string _microphone;
 
     public GameObject recodingText;
+
+    // 서버 URL
+    private string uploadURL = "https://yourserver.com/upload"; // 실제 서버의 URL로 변경하세요.
 
     private void Update()
     {
@@ -60,6 +65,42 @@ public class Mic : MonoBehaviour
     private void SaveRecording(AudioClip clip)
     {
         SavWav.Save("MyRecording", clip);
+    }
+
+    // 파일 업로드를 호출하는 함수
+    public void UploadFile()
+    {
+        // 코루틴 호출
+        StartCoroutine(Upload());
+    }
+
+    private IEnumerator Upload()
+    {
+        // 파일 경로
+        string filePath = System.IO.Path.Combine(Application.persistentDataPath, "MyRecording.wav");
+
+        // 파일을 바이트 배열로 읽기
+        byte[] fileData = System.IO.File.ReadAllBytes(filePath);
+
+        // 파일을 MultipartFormDataSection으로 생성
+        List<IMultipartFormSection> formData = new List<IMultipartFormSection>();
+        formData.Add(new MultipartFormFileSection("file", fileData, "MyRecording.wav", "audio/wav"));
+
+        // UnityWebRequest 생성
+        UnityWebRequest www = UnityWebRequest.Post(uploadURL, formData);
+
+        // 요청 전송
+        yield return www.SendWebRequest();
+
+        // 응답 처리
+        if (www.result == UnityWebRequest.Result.Success)
+        {
+            Debug.Log("파일 업로드 성공");
+        }
+        else
+        {
+            Debug.Log("파일 업로드 실패: " + www.error);
+        }
     }
 }
 
