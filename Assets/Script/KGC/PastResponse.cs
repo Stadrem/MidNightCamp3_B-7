@@ -8,16 +8,12 @@ public class PastResponse : MonoBehaviour
 {
     public Text responses;
     public int page;
-    List<string> rList = new List<string>();
+    public List<string> rList = new List<string>();
 
     // Start is called before the first frame update
     void Start()
     {
         
-        for (int i = 0; i < 20; i++)
-        {
-            rList.Add(i.ToString());
-        }
         responses.text = rList[page];
     }
     
