@@ -59,6 +59,8 @@ public class Mic : MonoBehaviour
             Microphone.End(_microphone);
             SaveRecording(_audioClip);
             Debug.Log("녹음 종료 및 저장");
+
+            UploadFile();
         }
     }
 
