@@ -9,6 +9,7 @@ public class Obstacle : MonoBehaviour
 
 
     public GameObject interaction;
+    public GameObject ChatText;
     
     
     
@@ -23,25 +24,53 @@ public class Obstacle : MonoBehaviour
     void Update()
     {
 
-        
+        if (Input.GetKeyDown(KeyCode.E))
+            //if (Input.GetButtonDown("E"))
+        {
+
+            ChatText.SetActive(true);
+            
+            // 오디오 소스 생성해서 추가
+            AudioSource audioSource = gameObject.GetComponent<AudioSource>();
+            audioSource.playOnAwake = true;
+                
+        }
+        if (Input.GetKeyDown(KeyCode.X))
+            //if (Input.GetButtonDown("E"))
+        {
+
+            ChatText.SetActive(false);
+            
+                
+        }
     }
+    
+
     
     void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))
 
         {
+  
             interaction.SetActive(true);
+  
         }
     }
+    
         
     void OnTriggerExit(Collider other)
 
     {
+        ChatText.SetActive(false);
+        
         if (other.gameObject.CompareTag("Player"))
         {
             interaction.SetActive(false);
         }
+        
+        
+        
     }
     
     
