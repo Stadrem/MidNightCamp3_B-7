@@ -1223,6 +1223,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: BaseUi 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3437496637837337132, guid: f1ab1680bd913514faac8372b77bfaa7,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5090191816557274200, guid: f1ab1680bd913514faac8372b77bfaa7,
         type: 3}
       propertyPath: m_Pivot.x
