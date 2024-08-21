@@ -12,23 +12,41 @@ public class Mic : MonoBehaviour
 
     public GameObject recodingText;
 
+    public bool clicked = false;
+
     // 서버 URL
     private string uploadURL = "http://192.168.1.11:8080/1/voice"; // 실제 서버의 URL로 변경하세요.
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.O))
+        //if (Input.GetKeyDown(KeyCode.O))
+        //{
+        //    recodingText.SetActive(true);
+        //    StartRecording();
+        //}
+
+        //if (Input.GetKeyDown(KeyCode.P))
+        //{
+        //    recodingText.SetActive(false);
+        //    StopRecordingAndSave();
+        //}
+    }
+
+    public void RecordStart()
+    {
+        if (!clicked)
         {
-            recodingText.SetActive(true);
+            clicked = !clicked;
             StartRecording();
         }
-
-        if (Input.GetKeyDown(KeyCode.P))
+        else
         {
-            recodingText.SetActive(false);
+            clicked = !clicked;
             StopRecordingAndSave();
         }
     }
+
+
 
     void Start()
     {
@@ -47,6 +65,7 @@ public class Mic : MonoBehaviour
     {
         if (_microphone != null)
         {
+            recodingText.SetActive(true);
             _audioClip = Microphone.Start(_microphone, true, 10, 44100);
             Debug.Log("녹음 시작");
         }
@@ -56,6 +75,7 @@ public class Mic : MonoBehaviour
     {
         if (_microphone != null && Microphone.IsRecording(_microphone))
         {
+            recodingText.SetActive(false);
             Microphone.End(_microphone);
             SaveRecording(_audioClip);
             Debug.Log("녹음 종료 및 저장");
