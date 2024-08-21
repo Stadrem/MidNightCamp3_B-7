@@ -37,7 +37,7 @@ public class StartMotion : MonoBehaviour
         // Y축 회전
         if (isRotating == true)
         {
-            player.transform.rotation *= Quaternion.Euler(0, 10 * Time.deltaTime, 0);
+            player.transform.rotation *= Quaternion.Euler(0, 5 * Time.deltaTime, 0);
         }
 
         // 아무 키나 누르면 회전 중단 및 위치 이동
