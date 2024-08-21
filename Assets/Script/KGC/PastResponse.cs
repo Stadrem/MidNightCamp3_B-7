@@ -13,6 +13,8 @@ public class PastResponse : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
+        rList.Add(responses.text);
         
         responses.text = rList[page];
     }
