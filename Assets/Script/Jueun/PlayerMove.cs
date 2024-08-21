@@ -19,7 +19,7 @@ public class Player : MonoBehaviour
     private float yVelocity = 0;
     
     // 중력 변수
-    private float gravity = -10f;
+    private float gravity = -5f;
     
     
     // 점프 상태 변수 (점프 중이 아닐때만 점프 하게 만들기 위해서 )
@@ -27,8 +27,7 @@ public class Player : MonoBehaviour
 
     
     // 점프력 변수
-    public float jumpPower = 2f;
-    
+    public float jumpPower = 1;
     // 이동 속도 변수
     public float moveSpeed = 7f;
     
