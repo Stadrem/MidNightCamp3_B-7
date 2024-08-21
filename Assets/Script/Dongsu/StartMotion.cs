@@ -9,7 +9,7 @@ public class StartMotion : MonoBehaviour
 
     GameObject ui;
 
-    Player playerScript;
+    PlayerMove playerScript;
 
     CamRotate camRotate;
 
@@ -22,7 +22,7 @@ public class StartMotion : MonoBehaviour
 
         ui = GameObject.Find("StartTitle");
 
-        playerScript = player.GetComponent<Player>();
+        playerScript = player.GetComponent<PlayerMove>();
 
         camRotate = Camera.main.GetComponent<CamRotate>();
 

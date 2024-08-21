@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -9,7 +10,7 @@ public class Obstacle : MonoBehaviour
 
 
     public GameObject interaction;
-    
+    public GameObject ChatText;
     
     
     // Start is called before the first frame update
@@ -23,38 +24,48 @@ public class Obstacle : MonoBehaviour
     void Update()
     {
 
-        
+        if (Input.GetKeyDown(KeyCode.E))
+            //if (Input.GetButtonDown("E"))
+        {
+            ChatText.SetActive(true);
+                
+        }
+        if (Input.GetKeyDown(KeyCode.X))
+        {
+            ChatText.SetActive(false);
+            
+        }
     }
-    
-    void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.CompareTag("Player"))
 
+    
+
+    void OnTriggerStay(Collider other)
+    {
+
+        // E 사운드
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            AudioSource audioSource = gameObject.GetComponent<AudioSource>();
+            audioSource.Play();
+
+        }
+        
+        if (other.gameObject.CompareTag("Player"))
         {
             interaction.SetActive(true);
         }
     }
-        
+    
     void OnTriggerExit(Collider other)
-
     {
+        ChatText.SetActive(false);
+        
         if (other.gameObject.CompareTag("Player"))
         {
             interaction.SetActive(false);
         }
+        
     }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     
     
 }
