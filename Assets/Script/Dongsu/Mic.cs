@@ -98,6 +98,7 @@ public class Mic : MonoBehaviour
         if (www.result == UnityWebRequest.Result.Success)
         {
             Debug.Log("파일 업로드 성공");
+            Debug.Log(www.downloadHandler.text);
         }
         else
         {

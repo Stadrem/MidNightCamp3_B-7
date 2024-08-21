@@ -16,6 +16,7 @@ public class PastResponse : MonoBehaviour
 
         rList.Add(responses.text);
         
+        rList.Add(responses.text);
         responses.text = rList[page];
     }
     

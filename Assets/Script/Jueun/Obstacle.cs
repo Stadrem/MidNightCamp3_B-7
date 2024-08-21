@@ -41,6 +41,10 @@ public class Obstacle : MonoBehaviour
                 ChatText.SetActive(true);
                 chatOpen = true;
 
+                playerScript.enabled = false;
+
+                camRotate.enabled = false;
+
             }
             if (Input.GetKeyDown(KeyCode.X))
             {
@@ -48,12 +52,8 @@ public class Obstacle : MonoBehaviour
                 chatOpen= false;
             }
         }
-        if (chatOpen)
-        {
-           playerScript.enabled = false;
-
-            camRotate.enabled = false;
-        }
+      
+        
 
     }
 
@@ -65,6 +65,8 @@ public class Obstacle : MonoBehaviour
         {
             interaction.SetActive(true);
             enterOk = true;
+              
+            
         }
     }
     
@@ -76,6 +78,7 @@ public class Obstacle : MonoBehaviour
         {
             interaction.SetActive(false);
             enterOk = false;
+           
         }
         
     }
