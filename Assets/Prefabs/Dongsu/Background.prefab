@@ -393,6 +393,7 @@ GameObject:
   - component: {fileID: 7984358528440883719}
   - component: {fileID: 4958503729094675137}
   - component: {fileID: 5903261269969675393}
+  - component: {fileID: 7547900953401103653}
   m_Layer: 0
   m_Name: SunAndMoonButton
   m_TagString: Untagged
@@ -500,8 +501,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 551a828638b60584189aa91b720930ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  eKeyUi: {fileID: 0}
   sunLight: {fileID: 4688965743170294026}
+--- !u!95 &7547900953401103653
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4993927847557883676}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b3ddc22b297283d47bfa83fe75644a98, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &5467670044224374672
 GameObject:
   m_ObjectHideFlags: 0

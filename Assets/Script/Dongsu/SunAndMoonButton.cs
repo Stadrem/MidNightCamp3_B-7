@@ -6,6 +6,13 @@ public class SunAndMoonButton : MonoBehaviour
 {
     public GameObject sunLight;
     bool isRotated = false;
+    Animator anim;
+
+    private void Start()
+    {
+        anim = GetComponent<Animator>();
+    }
+
     void Update()
     {
         // 레이캐스트를 쏘기 위한 코드
@@ -21,11 +28,13 @@ public class SunAndMoonButton : MonoBehaviour
                 {
                     if (isRotated)
                     {
+                        anim.SetTrigger("Click");
                         sunLight.transform.rotation = Quaternion.Euler(80, sunLight.transform.rotation.eulerAngles.y, sunLight.transform.rotation.eulerAngles.z);
                         RenderSettings.ambientIntensity = 1;
                     }
                     else
                     {
+                        anim.SetTrigger("Click");
                         sunLight.transform.rotation = Quaternion.Euler(0, sunLight.transform.rotation.eulerAngles.y, sunLight.transform.rotation.eulerAngles.z);
                         RenderSettings.ambientIntensity = 0.5f;
                     }
