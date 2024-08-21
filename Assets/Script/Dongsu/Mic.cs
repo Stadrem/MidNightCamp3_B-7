@@ -13,7 +13,7 @@ public class Mic : MonoBehaviour
     public GameObject recodingText;
 
     // 서버 URL
-    private string uploadURL = "https://yourserver.com/upload"; // 실제 서버의 URL로 변경하세요.
+    private string uploadURL = "http://192.168.1.11:8080/1/voice"; // 실제 서버의 URL로 변경하세요.
 
     private void Update()
     {
