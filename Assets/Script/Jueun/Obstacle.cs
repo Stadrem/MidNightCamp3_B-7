@@ -8,7 +8,7 @@ using UnityEngine.Rendering.Universal;
 public class Obstacle : MonoBehaviour
 {
 
-
+    public GameObject viewPos;
     public GameObject interaction;
     public GameObject ChatText;
     bool enterOk = false;
@@ -45,6 +45,15 @@ public class Obstacle : MonoBehaviour
 
                 camRotate.enabled = false;
 
+                chatOpen = true;
+                if (chatOpen)
+                {
+                    chatOpen = false;
+                    StartCoroutine(MovePos());
+                }
+
+                //player.transform.position = Vector3.Lerp(player.transform.position, viewPos.transform.position, Time.deltaTime);
+                //Camera.main.transform.rotation = Quaternion.Lerp(Camera.main.transform.rotation, viewPos.transform.rotation, Time.deltaTime);
             }
             if (Input.GetKeyDown(KeyCode.X))
             {
@@ -57,7 +66,17 @@ public class Obstacle : MonoBehaviour
 
     }
 
-    
+    IEnumerator MovePos()
+    {
+        for (int i = 0; i < 20; i++)
+        {
+            float interval = (float)i / 19;
+            print(interval);
+        player.transform.position = Vector3.Lerp(player.transform.position, viewPos.transform.position, interval);
+        Camera.main.transform.rotation =  Quaternion.Lerp(Camera.main.transform.rotation, viewPos.transform.rotation, interval);
+            yield return null;
+        }
+    }
 
     void OnTriggerEnter(Collider other)
     {
