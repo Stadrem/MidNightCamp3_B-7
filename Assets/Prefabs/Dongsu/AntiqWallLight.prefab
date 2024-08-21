@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &3937936504312146454
+--- !u!1 &9088734142342007509
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,47 +8,47 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4726331122449979421}
-  - component: {fileID: 6395140758826633911}
-  - component: {fileID: 6485064991269072530}
+  - component: {fileID: 8464858008832354826}
+  - component: {fileID: 5880584145255539931}
+  - component: {fileID: 2718438347026262273}
   m_Layer: 0
-  m_Name: Spot Light
+  m_Name: Point Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4726331122449979421
+--- !u!4 &8464858008832354826
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3937936504312146454}
+  m_GameObject: {fileID: 9088734142342007509}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.7071068, y: -0.7071068, z: -0, w: 0}
-  m_LocalPosition: {x: 0, y: 0.00458, z: 0.00274}
-  m_LocalScale: {x: 0.01338688, y: 0.013386881, z: 0.01338688}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.00028, y: 0.00465, z: 0.00004}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5921531969359317268}
-  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
---- !u!108 &6395140758826633911
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!108 &5880584145255539931
 Light:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3937936504312146454}
+  m_GameObject: {fileID: 9088734142342007509}
   m_Enabled: 1
   serializedVersion: 10
-  m_Type: 0
+  m_Type: 2
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1
-  m_Range: 2.8
-  m_SpotAngle: 95.663025
-  m_InnerSpotAngle: 64.20943
+  m_Intensity: 0.25
+  m_Range: 8.46
+  m_SpotAngle: 30
+  m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
     m_Type: 0
@@ -95,13 +95,13 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!114 &6485064991269072530
+--- !u!114 &2718438347026262273
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3937936504312146454}
+  m_GameObject: {fileID: 9088734142342007509}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
@@ -154,7 +154,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 6f8bf84f5fb41d14a81c17bee48a397f,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -4.503
+      value: -4.09
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6f8bf84f5fb41d14a81c17bee48a397f,
         type: 3}
@@ -207,7 +207,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 6f8bf84f5fb41d14a81c17bee48a397f,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 4726331122449979421}
+      addedObject: {fileID: 8464858008832354826}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f8bf84f5fb41d14a81c17bee48a397f, type: 3}
 --- !u!4 &5921531969359317268 stripped
