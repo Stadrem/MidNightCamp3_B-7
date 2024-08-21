@@ -111,6 +111,9 @@ public class Player : MonoBehaviour
         transform.position += dir * moveSpeed * Time.deltaTime;
         cc.Move(dir * moveSpeed * Time.deltaTime);
         
+
+        
+        
         
     }
     
