@@ -41,7 +41,12 @@ public class PastResponse : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
-            rList.Add("Test");
+            rList.Add(responses.text);
         }
+    }
+
+    public void TextUpload(string outPut)
+    {
+        rList.Add(outPut);
     }
 }
