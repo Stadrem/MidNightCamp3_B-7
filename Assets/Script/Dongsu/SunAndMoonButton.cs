@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class SunAndMoonButton : MonoBehaviour
 {
-
-    public GameObject eKeyUi;
     public GameObject sunLight;
     bool isRotated = false;
     void Update()
@@ -17,8 +15,6 @@ public class SunAndMoonButton : MonoBehaviour
             if (hit.collider.CompareTag("Player"))
             {
                 print("닿음");
-                // Player 태그가 달린 오브젝트와 접촉하면 Image 오브젝트 활성화
-                eKeyUi.SetActive(true);
 
                 // E 키를 누르면 B 오브젝트의 X 회전 축 변경
                 if (Input.GetKeyDown(KeyCode.E))
@@ -36,10 +32,6 @@ public class SunAndMoonButton : MonoBehaviour
                     isRotated = !isRotated; // 회전 상태 토글
                 }
             }
-        }
-        else
-        {
-            eKeyUi.SetActive(false);
         }
     }
 }
