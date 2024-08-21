@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -30,7 +30,7 @@ public class PlayerMove : MonoBehaviour
     private bool isWalking;
 
     
-    // Start is called before the first frame update
+    // Start is called before the first frame update 
     void Start()
     {
         cc = GetComponent<CharacterController>();

@@ -10,7 +10,7 @@ public class PastResponse : MonoBehaviour
     public int page;
     public List<string> rList = new List<string>();
 
-    // Start is called before the first frame update
+    // Start is called before the first frame update 
     void Start()
     {
         

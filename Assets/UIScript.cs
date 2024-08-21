@@ -17,7 +17,7 @@ public class UIScript : MonoBehaviour
 
         camRotate = Camera.main.GetComponent<CamRotate>();
     }
-    // Start is called before the first frame update
+    // Start is called before the first frame update 
     public void Close()
     {
 

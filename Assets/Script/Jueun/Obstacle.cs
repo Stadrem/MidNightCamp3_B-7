@@ -34,7 +34,7 @@ public class Obstacle : MonoBehaviour
         if (enterOk == true)
         {
             if (Input.GetKeyDown(KeyCode.E))
-            //if (Input.GetButtonDown("E"))
+            //if (Input.GetButtonDown("E")) 
             {
                 AudioSource audioSource = gameObject.GetComponent<AudioSource>();
                 audioSource.Play();

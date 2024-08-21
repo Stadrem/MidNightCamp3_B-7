@@ -102,7 +102,7 @@ public class Mic : MonoBehaviour
         }
         else
         {
-            Debug.Log("파일 업로드 실패: " + www.error);
+            Debug.Log("파일 업로드 실패: " + www.error); 
         }
     }
 }
