@@ -22,6 +22,12 @@ public class HttpManager : MonoBehaviour
     public Button postButton;
     public GameObject loading;
 
+
+    private void Start()
+    {
+       // Application.OpenURL("https://mindful-art.eu/?gad_source=1&gclid=CjwKCAjw_ZC2BhAQEiwAXSgClpomrH3aLd93cJ9dniLf18761Pdqng9Z6bJ1mQn0T6gzMukFJDimJRoCUBMQAvD_BwE");
+    }
+
     // 사용자가 입력한 문자열을 JSON으로 변환하고 POST 요청을 보내는 메서드
     public void PostString()
     {
@@ -38,7 +44,7 @@ public class HttpManager : MonoBehaviour
     {
         // 사용자가 입력한 문자열을 StringData 구조체로 감싸고, 이를 JSON 형식으로 변환
         StringData data = new StringData(); // 새로운 StringData 객체 생성
-        data.question = userString; // 사용자가 입력한 문자열을 content 필드에 할당
+        data.content = userString; // 사용자가 입력한 문자열을 content 필드에 할당
         string jsonData = JsonUtility.ToJson(data); // StringData 객체를 JSON 문자열로 변환
 
         // JSON 데이터를 바이트 배열로 인코딩 (UTF-8)
@@ -92,5 +98,5 @@ public class HttpManager : MonoBehaviour
 [System.Serializable] // 이 구조체가 JSON으로 직렬화될 수 있도록 표시
 public struct StringData
 {
-    public string question; // 사용자가 입력한 문자열을 저장하는 필드
+    public string content; // 사용자가 입력한 문자열을 저장하는 필드
 }
