@@ -7,7 +7,7 @@ public class StartMotion : MonoBehaviour
 
     GameObject player;
 
-    public GameObject ui;
+    GameObject ui;
 
     Player playerScript;
 
@@ -19,6 +19,8 @@ public class StartMotion : MonoBehaviour
     void Start()
     {
         player = GameObject.Find("Player");
+
+        ui = GameObject.Find("StartTitle");
 
         playerScript = player.GetComponent<Player>();
 
