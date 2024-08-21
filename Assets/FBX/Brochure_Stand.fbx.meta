@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 8a918f723e3d5b244a2dc0299d05be32
+guid: 28f74f9b9d1d15b4390c552245aac6af
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -7,23 +7,23 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Benches_TX
-    second: {fileID: 2100000, guid: af28e87b73f0e0f478a803bfb745e549, type: 2}
+      name: Metal1
+    second: {fileID: 2100000, guid: aa392f354fe04b345b8b755d82b702c3, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Floor_TX
-    second: {fileID: 2100000, guid: d68946d8069f1ce458793301f47cd75f, type: 2}
+      name: Metal2
+    second: {fileID: 2100000, guid: 392c76c131794cb47b7c2c2505629676, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Gallery_TX
-    second: {fileID: 2100000, guid: 9b611138f96912c4ab90e6cf71163edd, type: 2}
+      name: Metal3
+    second: {fileID: 2100000, guid: 56dc9ab1b6842c64c98789f8d3f27512, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Glass_TX
-    second: {fileID: 2100000, guid: eb058246d98638045b24196661a30835, type: 2}
+      name: Metal4
+    second: {fileID: 2100000, guid: 1607651ac396cf9478a302ec8e63f580, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
