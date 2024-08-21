@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -11,48 +11,60 @@ public class Obstacle : MonoBehaviour
 
     public GameObject interaction;
     public GameObject ChatText;
-    
-    
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-        
-    }
+    bool enterOk = false;
+    bool chatOpen = false;
 
+    PlayerMove playerScript;
+    GameObject player;
+    CamRotate camRotate;
+
+    private void Start()
+    {
+        player = GameObject.Find("Player");
+
+        playerScript = player.GetComponent<PlayerMove>();
+
+        camRotate = Camera.main.GetComponent<CamRotate>();
+
+      
+    }
     // Update is called once per frame
     void Update()
     {
-
-        if (Input.GetKeyDown(KeyCode.E))
+        if (enterOk == true)
+        {
+            if (Input.GetKeyDown(KeyCode.E))
             //if (Input.GetButtonDown("E"))
-        {
-            ChatText.SetActive(true);
-                
+            {
+                AudioSource audioSource = gameObject.GetComponent<AudioSource>();
+                audioSource.Play();
+                ChatText.SetActive(true);
+                chatOpen = true;
+
+            }
+            if (Input.GetKeyDown(KeyCode.X))
+            {
+                ChatText.SetActive(false);
+                chatOpen= false;
+            }
         }
-        if (Input.GetKeyDown(KeyCode.X))
+        if (chatOpen)
         {
-            ChatText.SetActive(false);
-            
+           playerScript.enabled = false;
+
+            camRotate.enabled = false;
         }
+
     }
 
     
 
-    void OnTriggerStay(Collider other)
+    void OnTriggerEnter(Collider other)
     {
-
-        // E 사운드
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            AudioSource audioSource = gameObject.GetComponent<AudioSource>();
-            audioSource.Play();
-
-        }
-        
         if (other.gameObject.CompareTag("Player"))
         {
             interaction.SetActive(true);
+            enterOk = true;
         }
     }
     
@@ -63,6 +75,7 @@ public class Obstacle : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             interaction.SetActive(false);
+            enterOk = false;
         }
         
     }
