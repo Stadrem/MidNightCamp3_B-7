@@ -13,16 +13,16 @@ MonoBehaviour:
   m_Name: Background Lens Flare (SRP)
   m_EditorClassIdentifier: 
   elements:
-  - visible: 0
+  - visible: 1
     position: 0
     positionOffset: {x: 0, y: 0}
     angularOffset: 0
-    translationScale: {x: 2, y: 2}
-    m_LocalIntensity: 2.54
+    translationScale: {x: 1, y: 1}
+    m_LocalIntensity: 1
     lensFlareTexture: {fileID: 0}
-    uniformScale: 2
-    sizeXY: {x: 2, y: 2}
-    allowMultipleElement: 1
+    uniformScale: 1
+    sizeXY: {x: 1, y: 1}
+    allowMultipleElement: 0
     m_Count: 7
     preserveAspectRatio: 0
     rotation: 0
